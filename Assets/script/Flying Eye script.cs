@@ -22,25 +22,27 @@ public class FlyingEyescript : Enemies
         // Move only if not near the player
         if (!IsNearPlayer)
         {
+            // move flying eye towards player
             transform.Translate(move * Enemy_Speed * Time.deltaTime);
             animation.SetBool("flying", true);
         }
 
-        // change facing direction
+        // change facing direction to the right 
         if (Player.transform.position.x > transform.position.x) 
         {
             sp.flipX = false;
         }
 
-        // change facing direction
+        // change facing direction to the left
         if (Player.transform.position.x < transform.position.x)
         {
             sp.flipX = true;
         }
 
-        // stop movement
+        // stop movement if player in flying eyes attack range
         if (Vector3.Distance(transform.position, Player.transform.position) < attack_range) 
         {
+            // stop movement 
             IsNearPlayer = true;
             animation.SetBool("flying", false);
         }

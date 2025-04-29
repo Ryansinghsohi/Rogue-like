@@ -14,6 +14,7 @@ public class SaveManager : MonoBehaviour
         SavePath = Path.Combine(Application.persistentDataPath, "PlayerData.json");
     }
 
+    // spara data
     public void SaveGame()
     {
         // skapa en container för playerdata för att den är en static klass
@@ -30,6 +31,7 @@ public class SaveManager : MonoBehaviour
         Debug.Log("spelet har sparats");
     }
 
+    // ladda sparat spel data
     public void LoadGame()
     {
         // kolla om en fill finns
