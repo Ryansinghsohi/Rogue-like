@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+
+public class SaveManager : MonoBehaviour
+{
+    private string SavePath;
+
+    // awake är kallad innan allt
+    void Awake()
+    {
+        // hittar en path till Playerdata
+        SavePath = Path.Combine(Application.persistentDataPath, "PlayerData.json");
+    }
+
+    public void SaveGame()
+    {
+        // skapa en container för playerdata för att den är en static klass
+        PlayerDataContainer container = new PlayerDataContainer();
+        container.health = PlayerData.health;
+        container.max_health = PlayerData.max_health;
+        container.Coins = PlayerData.Coins;
+
+        // använd en container för att skapa en json fill/string
+        string datatosave = JsonUtility.ToJson(container, true);
+
+        // spara allt datatosave till savepath
+        File.WriteAllText(SavePath, datatosave);
+        Debug.Log("spelet har sparats");
+    }
+
+    public void LoadGame()
+    {
+        // kolla om en fill finns
+        if (File.Exists(SavePath))
+        {
+            // läser av och hämtar data från json save filen
+            string dataFromFile = File.ReadAllText(SavePath);
+            PlayerDataContainer container = JsonUtility.FromJson<PlayerDataContainer>(dataFromFile);
+
+            // Kopiera tillbaka in i statiska klass PlayerData
+            PlayerData.health = container.health;
+            PlayerData.max_health = container.max_health;
+            PlayerData.Coins = container.Coins;
+
+            // säger till dig om spelet har laddats
+            Debug.Log("Spelet laddat!");
+        }
+        else
+        {
+            Debug.LogWarning("Ingen sparfil hittades.");
+        }
+    }
+
+    [System.Serializable]
+    public class PlayerDataContainer
+    {
+        public int health;
+        public int max_health;
+        public int Coins;
+    }
+}
