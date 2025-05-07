@@ -250,11 +250,13 @@ MonoBehaviour:
   m_rollForce: 20
   m_slideDust: {fileID: 1038168246061390451, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
   Attack_Point: {fileID: 432745281842311861}
-  attackrange: 2
+  attackrange: 1000
   enemylayer:
     serializedVersion: 2
     m_Bits: 64
-  attackDamage: 10
+  attackDamage: 100
+  Healthbar: {fileID: 0}
+  Coins_ui: {fileID: 0}
 --- !u!95 &3749627063633924464
 Animator:
   serializedVersion: 5

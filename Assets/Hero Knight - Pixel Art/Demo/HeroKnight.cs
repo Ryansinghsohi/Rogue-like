@@ -72,6 +72,7 @@ public class HeroKnight : MonoBehaviour {
             return;
     }
 
+    // update the display count for coins
     void UpdateCoin()
     {
         // change the amount of coins displayed
@@ -176,7 +177,7 @@ public class HeroKnight : MonoBehaviour {
                 Collider2D[] hitenemy = Physics2D.OverlapCircleAll(Attack_Point.position, attackrange, enemylayer);
                 foreach (Collider2D enemy in hitenemy)
                 {
-                    enemy.GetComponent<Enemies>().TakeDamage(attackDamage);
+                    enemy.GetComponent<Enemies>().TakeDamage(PlayerData.dmg_multiplier * attackDamage);
                 }
             }
 
