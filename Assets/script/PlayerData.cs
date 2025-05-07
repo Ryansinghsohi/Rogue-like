@@ -9,8 +9,9 @@ public static class PlayerData
 {
     public static int health = 100;
     public static int max_health = 100;
-    public static int Coins = 0;
+    public static int Coins = 100;
     public static int dmg_multiplier = 1;
-    public static int level;
+    public static int level = 1;
+    public static int high_score = 0;
     
 }

@@ -101,6 +101,7 @@ public abstract class Enemies : MonoBehaviour
         {
             // run death animation and destroy game object and spawn coin
             animation.SetBool("dead", true);
+            PlayerData.level += 1;
             SpawnCoin();
             Invoke("Destroy_Enemy", 1f);
             //SceneManager.LoadScene("");

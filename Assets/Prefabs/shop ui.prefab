@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5632287606078760108}
   - component: {fileID: 6336009680385239714}
   m_Layer: 5
-  m_Name: Return to game button
+  m_Name: Return to menu button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: main_game
+          m_StringArgument: main menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &202443493834887986
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Start
+  m_text: 'menu
 
 '
   m_isRightToLeft: 0

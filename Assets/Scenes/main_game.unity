@@ -406,16 +406,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9160231}
     - target: {fileID: 7731880672466190503, guid: 01887286adb41834fb34bce423f13c63, type: 3}
+      propertyPath: level_ui
+      value: 
+      objectReference: {fileID: 1436551692}
+    - target: {fileID: 7731880672466190503, guid: 01887286adb41834fb34bce423f13c63, type: 3}
       propertyPath: Healthbar
       value: 
       objectReference: {fileID: 9080921993604103856}
     - target: {fileID: 7731880672466190503, guid: 01887286adb41834fb34bce423f13c63, type: 3}
       propertyPath: attackrange
-      value: 100000
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7731880672466190503, guid: 01887286adb41834fb34bce423f13c63, type: 3}
       propertyPath: attackDamage
-      value: 100000
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -543,6 +547,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df2730d9dd8aa784f99044ff8ff4d18b, type: 3}
+--- !u!114 &1436551692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3187676035473460956, guid: df2730d9dd8aa784f99044ff8ff4d18b, type: 3}
+  m_PrefabInstance: {fileID: 1436551691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1568496671
 GameObject:
   m_ObjectHideFlags: 0

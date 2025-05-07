@@ -37,12 +37,17 @@ public class HeroKnight : MonoBehaviour {
     private bool isBlocking;
     public Image Healthbar;
     public TextMeshProUGUI Coins_ui;
+    public TextMeshProUGUI level_ui;
+    private SaveManager saveManager;
 
 
     // Used this for initialization
     void Start()
     {
         PlayerData.health = PlayerData.max_health;
+        PlayerData.level = 1;
+        saveManager = GameObject.FindAnyObjectByType<SaveManager>();
+        //saveManager.LoadGame();
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
@@ -73,25 +78,35 @@ public class HeroKnight : MonoBehaviour {
     }
 
     // update the display count for coins
-    void UpdateCoin()
+    void UpdateUIText()
     {
         // change the amount of coins displayed
         Coins_ui.text = PlayerData.Coins.ToString();
+        // update level text
+        level_ui.text = "level: " + PlayerData.level;
+
     }
 
     //  upadate health bar fill amount
     void UpdateHealthBar()
     {
         // change the fill amount depending on the players health
-        Healthbar.fillAmount = (float)PlayerData.health / (float)PlayerData.max_health;
+        Healthbar.fillAmount = (float)PlayerData.health / (float)PlayerData.max_health;  
     }
 
     // Update is called once per frame
     void Update ()
-    {   
+    {
         // upadate health bar fill amount and coins
         UpdateHealthBar();
-        UpdateCoin();
+        UpdateUIText();
+
+        // checking if the level is higher than high score 
+        if (PlayerData.level > PlayerData.high_score)
+        {
+            // if yes, then change high score to the level and reset level
+            PlayerData.high_score = PlayerData.level;
+        }
 
         // Increase timer that controls attack combo
         m_timeSinceAttack += Time.deltaTime;

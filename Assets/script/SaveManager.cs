@@ -22,6 +22,9 @@ public class SaveManager : MonoBehaviour
         container.health = PlayerData.health;
         container.max_health = PlayerData.max_health;
         container.Coins = PlayerData.Coins;
+        container.dmg = PlayerData.dmg_multiplier;
+        container.level = PlayerData.level;
+        container.high_score = PlayerData.high_score;
 
         // använd en container för att skapa en json fill/string
         string datatosave = JsonUtility.ToJson(container, true);
@@ -45,6 +48,9 @@ public class SaveManager : MonoBehaviour
             PlayerData.health = container.health;
             PlayerData.max_health = container.max_health;
             PlayerData.Coins = container.Coins;
+            PlayerData.dmg_multiplier = container.dmg;
+            PlayerData.level = container.level;
+            PlayerData.high_score = container.level;
 
             // säger till dig om spelet har laddats
             Debug.Log("Spelet laddat!");
@@ -61,5 +67,8 @@ public class SaveManager : MonoBehaviour
         public int health;
         public int max_health;
         public int Coins;
+        public int dmg;
+        public int level;
+        public int high_score;
     }
 }

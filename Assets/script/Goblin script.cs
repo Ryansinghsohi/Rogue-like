@@ -8,7 +8,9 @@ public class Goblinscript : Enemies
     public void Awake()
     {
         // coin amount
-        Coin_drop = 3;
+        Coin_drop = 5 + 2 * PlayerData.level;
+        Enemy_Health = 50 + 10 * PlayerData.level;
+        Enemy_damage = 10 + 5 * PlayerData.level;
     }
 
     // Goblins movement

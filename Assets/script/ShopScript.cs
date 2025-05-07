@@ -12,6 +12,12 @@ public class ShopScript : MonoBehaviour
     public TextMeshProUGUI hp_text;
     public TextMeshProUGUI coins_text;
 
+    private SaveManager saveManager;
+
+    private void Start()
+    {
+        saveManager = GameObject.FindAnyObjectByType<SaveManager>();
+    }
 
     public void dmg() 
     {

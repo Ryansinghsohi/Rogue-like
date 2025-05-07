@@ -9,7 +9,9 @@ public class FlyingEyescript : Enemies
     // coin drop amount instanstate 
     public void Awake()
     {
-        Coin_drop = 5;
+        Coin_drop = 10 + 3 * PlayerData.level;
+        Enemy_Health = 100 + 20 * PlayerData.level;
+        Enemy_damage = 20 + 10 * PlayerData.level;
     }
 
     // movement funktion
