@@ -6,9 +6,11 @@ using TMPro;
 public class mainmenuscript : MonoBehaviour
 {
     public TextMeshProUGUI HighScoreText;
+    public SaveManager saveManager;
 
     void UpdateText()
     {
+        saveManager.LoadGame();
         HighScoreText.text = "Highest level: " + PlayerData.high_score;
     }
 

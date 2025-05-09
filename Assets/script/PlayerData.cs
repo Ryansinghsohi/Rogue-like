@@ -13,5 +13,4 @@ public static class PlayerData
     public static int dmg_multiplier = 1;
     public static int level = 1;
     public static int high_score = 0;
-    
 }

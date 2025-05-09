@@ -31,7 +31,6 @@ public class SaveManager : MonoBehaviour
 
         // spara allt datatosave till savepath
         File.WriteAllText(SavePath, datatosave);
-        Debug.Log("spelet har sparats");
     }
 
     // ladda sparat spel data
@@ -53,7 +52,6 @@ public class SaveManager : MonoBehaviour
             PlayerData.high_score = container.level;
 
             // säger till dig om spelet har laddats
-            Debug.Log("Spelet laddat!");
         }
         else
         {

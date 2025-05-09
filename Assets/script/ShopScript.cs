@@ -12,11 +12,11 @@ public class ShopScript : MonoBehaviour
     public TextMeshProUGUI hp_text;
     public TextMeshProUGUI coins_text;
 
-    private SaveManager saveManager;
+    public SaveManager saveManager;
 
     private void Start()
     {
-        saveManager = GameObject.FindAnyObjectByType<SaveManager>();
+        //saveManager = GameObject.FindAnyObjectByType<SaveManager>();
     }
 
     public void dmg() 
@@ -33,6 +33,7 @@ public class ShopScript : MonoBehaviour
         {
             return;
         }
+        saveManager.SaveGame();
     }
 
     // Increase max hp after button 
@@ -50,6 +51,7 @@ public class ShopScript : MonoBehaviour
         {
             return;
         }
+        saveManager.SaveGame();
     }
 
     void Update_text()

@@ -38,16 +38,17 @@ public class HeroKnight : MonoBehaviour {
     public Image Healthbar;
     public TextMeshProUGUI Coins_ui;
     public TextMeshProUGUI level_ui;
-    private SaveManager saveManager;
+    public SaveManager saveManager;
 
 
     // Used this for initialization
     void Start()
     {
+        PlayerData.level = 1;
+        //saveManager = GameObject.FindAnyObjectByType<SaveManager>();
+        saveManager.LoadGame();
         PlayerData.health = PlayerData.max_health;
         PlayerData.level = 1;
-        saveManager = GameObject.FindAnyObjectByType<SaveManager>();
-        //saveManager.LoadGame();
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
@@ -60,6 +61,7 @@ public class HeroKnight : MonoBehaviour {
     // used for the invoke to play the death scene
     public void PlayDeathScene()
     {
+        saveManager.SaveGame();
         SceneManager.LoadScene("death");
     }
 
@@ -157,6 +159,7 @@ public class HeroKnight : MonoBehaviour {
         // is dead 
         if (m_isDead == true) 
         {
+            
             Invoke("PlayDeathScene", 1f);
         }
 
