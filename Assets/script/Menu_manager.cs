@@ -13,20 +13,4 @@ public class start_button_script : MonoBehaviour
         saveManager.LoadGame();
         SceneManager.LoadScene(scene_name);
     }
-
-    // show stats
-    public void DisplayStats() 
-    {
-        
-    }
-
-    public void OpenMenu() 
-    {
-        
-    }
-
-    public void CloseMenu() 
-    {
-        
-    }
 }

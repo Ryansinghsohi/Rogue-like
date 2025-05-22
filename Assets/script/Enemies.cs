@@ -29,8 +29,10 @@ public abstract class Enemies : MonoBehaviour
         timeafterattack += Time.deltaTime;
         Movement();
         Attack();
+        FacePlayer();
     }
 
+    // kalla på alla componentens 
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
@@ -82,6 +84,26 @@ public abstract class Enemies : MonoBehaviour
     // ger alla enemy en egen movement
     public abstract void Movement();
 
+
+    // Rikta alla enemy till player
+    protected void FacePlayer()
+    {
+        // Flips enemy sprite to face the player
+        // check if player is given
+        if (Player == null) return;
+
+        if (Player.transform.position.x > transform.position.x)
+        {
+            sp.flipX = false; // Facing right
+        }
+        else if (Player.transform.position.x < transform.position.x)
+        {
+            sp.flipX = true;  // Facing left
+        }
+    }
+
+    
+
     // destroy enemy används för en invoke
     void Destroy_Enemy()
     {
@@ -101,7 +123,6 @@ public abstract class Enemies : MonoBehaviour
         {
             // run death animation and destroy game object and spawn coin
             animation.SetBool("dead", true);
-            PlayerData.level += 1;
             SpawnCoin();
             Invoke("Destroy_Enemy", 1f);
             //SceneManager.LoadScene("");

@@ -9,21 +9,25 @@ public class CoinMovement : MonoBehaviour
 
     public bool MoveToPlayer;
     public float speed;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
+    public CircleCollider2D cc;
 
-    private bool collectable = false;
     public int value;
+    private bool collectabel = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        // get player and rigidbody
         Player = GameObject.Find("HeroKnight").GetComponent<HeroKnight>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        cc = gameObject.GetComponent<CircleCollider2D>();
     }
 
     // update per frame
     private void FixedUpdate()
     {
+        // move to player after one second 
         if (MoveToPlayer == false) 
         {
             if(timer < 1) 
@@ -32,12 +36,14 @@ public class CoinMovement : MonoBehaviour
             }
             else 
             {
-                collectable = true;
+                collectabel = true;
                 MoveToPlayer = true;
+                cc.enabled = false;
                 rb.gravityScale = 0;
             }
         }
 
+        // coin to player path
         if(MoveToPlayer == true) 
         {
 
@@ -48,7 +54,7 @@ public class CoinMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && collectable) 
+        if (other.gameObject.tag == "Player" && collectabel) 
         {
             PlayerData.Coins += value;
             Destroy(gameObject);

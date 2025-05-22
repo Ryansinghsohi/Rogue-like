@@ -165,7 +165,8 @@ MonoBehaviour:
   timer: 0
   MoveToPlayer: 0
   speed: 5
-  rb: {fileID: 8945867444804388733}
+  cc: {fileID: 3489594902209708853}
+  value: 0
 --- !u!58 &6907154210702228595
 CircleCollider2D:
   m_ObjectHideFlags: 0

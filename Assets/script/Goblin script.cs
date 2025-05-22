@@ -21,7 +21,6 @@ public class Goblinscript : Enemies
         {
             // Goblin to player vector
             rb.velocity = new Vector2(-Enemy_Speed, rb.velocity.y);
-            sp.flipX = true;
             animation.SetBool("running", true);
         }
 
@@ -30,7 +29,6 @@ public class Goblinscript : Enemies
         {
             // Goblin to player vector 
             rb.velocity = new Vector2(Enemy_Speed, rb.velocity.y);
-            sp.flipX = false;
             animation.SetBool("running", true);
         }
 
@@ -41,7 +39,5 @@ public class Goblinscript : Enemies
             rb.velocity = new Vector2(0f, 0f);
             animation.SetBool("running", false);
         }
-
-
     }
 }

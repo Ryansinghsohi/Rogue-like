@@ -51,8 +51,8 @@ public class SaveManager : MonoBehaviour
             PlayerData.level = container.level;
             PlayerData.high_score = container.level;
 
-            // säger till dig om spelet har laddats
         }
+
         else
         {
             Debug.LogWarning("Ingen sparfil hittades.");

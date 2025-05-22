@@ -29,17 +29,6 @@ public class FlyingEyescript : Enemies
             animation.SetBool("flying", true);
         }
 
-        // change facing direction to the right 
-        if (Player.transform.position.x > transform.position.x) 
-        {
-            sp.flipX = false;
-        }
-
-        // change facing direction to the left
-        if (Player.transform.position.x < transform.position.x)
-        {
-            sp.flipX = true;
-        }
 
         // stop movement if player in flying eyes attack range
         if (Vector3.Distance(transform.position, Player.transform.position) < attack_range) 
