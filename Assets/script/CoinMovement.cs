@@ -13,7 +13,6 @@ public class CoinMovement : MonoBehaviour
     public CircleCollider2D cc;
 
     public int value;
-    private bool collectabel = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +35,6 @@ public class CoinMovement : MonoBehaviour
             }
             else 
             {
-                collectabel = true;
                 MoveToPlayer = true;
                 cc.enabled = false;
                 rb.gravityScale = 0;
@@ -54,7 +52,7 @@ public class CoinMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && collectabel) 
+        if (other.gameObject.tag == "Player") 
         {
             PlayerData.Coins += value;
             Destroy(gameObject);

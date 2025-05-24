@@ -39,13 +39,13 @@ public class HeroKnight : MonoBehaviour {
     public TextMeshProUGUI Coins_ui;
     public TextMeshProUGUI level_ui;
     public SaveManager saveManager;
+    private Vector3 spawnPosition = new Vector3(0f, -3f, 0f);
 
 
     // Used this for initialization
     void Start()
     {
         PlayerData.level = 1;
-        //saveManager = GameObject.FindAnyObjectByType<SaveManager>();
         saveManager.LoadGame();
         PlayerData.health = PlayerData.max_health;
         PlayerData.level = 1;
@@ -103,6 +103,14 @@ public class HeroKnight : MonoBehaviour {
         UpdateHealthBar();
         UpdateUIText();
 
+
+        // reset player position to middle
+        if(gameObject.transform.position.x < -70 || gameObject.transform.position.x > 70f || gameObject.transform.position.y < -5f)
+        {
+            gameObject.transform.position = spawnPosition;
+        }
+
+
         // checking if the level is higher than high score 
         if (PlayerData.level > PlayerData.high_score)
         {
@@ -159,7 +167,6 @@ public class HeroKnight : MonoBehaviour {
         // is dead 
         if (m_isDead == true) 
         {
-            
             Invoke("PlayDeathScene", 1f);
         }
 

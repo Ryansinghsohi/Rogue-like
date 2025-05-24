@@ -31,7 +31,7 @@ public class HighscoreManager : MonoBehaviour
 
     private void OnEntriesLoaded(Entry[] entries)
     {
-        string newText = "High score: \n";
+        string newText = "High level: \n";
         foreach (Entry entry in entries)
         {
             newText += $"{entry.Rank} {entry.Username} - {entry.Score}\n";
