@@ -92,7 +92,7 @@ public class ShopScript : MonoBehaviour
     {
         hp_text.text = "Hp:" + PlayerData.max_health;
         dmg_text.text = "dmg mult: " + PlayerData.dmg_multiplier;
-        coins_text.text = "" + PlayerData.Coins;
+        coins_text.text = "Coins:" + PlayerData.Coins;
     }
 
 

@@ -83,7 +83,7 @@ public class HeroKnight : MonoBehaviour {
     void UpdateUIText()
     {
         // change the amount of coins displayed
-        Coins_ui.text = PlayerData.Coins.ToString();
+        Coins_ui.text = "Coins:" + PlayerData.Coins.ToString();
         // update level text
         level_ui.text = "level: " + PlayerData.level;
 

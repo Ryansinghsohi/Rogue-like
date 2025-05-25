@@ -206,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 951939609}
-        m_TargetAssemblyTypeName: start_button_script, Assembly-CSharp
+      - m_Target: {fileID: 951939610}
+        m_TargetAssemblyTypeName: mainmenuscript, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 5
         m_Arguments:
@@ -543,8 +543,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 951939609}
-        m_TargetAssemblyTypeName: start_button_script, Assembly-CSharp
+      - m_Target: {fileID: 951939610}
+        m_TargetAssemblyTypeName: mainmenuscript, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 5
         m_Arguments:
@@ -757,7 +757,6 @@ GameObject:
   - component: {fileID: 951939607}
   - component: {fileID: 951939606}
   - component: {fileID: 951939605}
-  - component: {fileID: 951939609}
   - component: {fileID: 951939610}
   m_Layer: 5
   m_Name: main menu
@@ -852,19 +851,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &951939609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951939604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a92de1bf113294f9ff58deeac237cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveManager: {fileID: 909890217}
 --- !u!114 &951939610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1431,7 +1417,7 @@ GameObject:
   - component: {fileID: 2032723205}
   - component: {fileID: 2032723204}
   m_Layer: 5
-  m_Name: quit button
+  m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,8 +1487,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 951939609}
-        m_TargetAssemblyTypeName: start_button_script, Assembly-CSharp
+      - m_Target: {fileID: 951939610}
+        m_TargetAssemblyTypeName: mainmenuscript, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 5
         m_Arguments:
