@@ -529,7 +529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5306767108366635415, guid: df2730d9dd8aa784f99044ff8ff4d18b, type: 3}
       propertyPath: m_PixelPerfect
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5696629397106787492, guid: df2730d9dd8aa784f99044ff8ff4d18b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -554,6 +554,14 @@ PrefabInstance:
     - target: {fileID: 6155050997136895811, guid: df2730d9dd8aa784f99044ff8ff4d18b, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155050997136895811, guid: df2730d9dd8aa784f99044ff8ff4d18b, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155050997136895811, guid: df2730d9dd8aa784f99044ff8ff4d18b, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7116346983616182227, guid: df2730d9dd8aa784f99044ff8ff4d18b, type: 3}
       propertyPath: m_AnchoredPosition.x

@@ -543,6 +543,10 @@ PrefabInstance:
       value: shop ui
       objectReference: {fileID: 0}
     - target: {fileID: 1141379737883048856, guid: d7f4fafbcdc9faf4d94e52adbf42588f, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1141379737883048856, guid: d7f4fafbcdc9faf4d94e52adbf42588f, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
@@ -550,6 +554,14 @@ PrefabInstance:
       propertyPath: saveManager
       value: 
       objectReference: {fileID: 820787238}
+    - target: {fileID: 5103063895781297674, guid: d7f4fafbcdc9faf4d94e52adbf42588f, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103063895781297674, guid: d7f4fafbcdc9faf4d94e52adbf42588f, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6797008583665421431, guid: d7f4fafbcdc9faf4d94e52adbf42588f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
