@@ -105,7 +105,7 @@ public class HeroKnight : MonoBehaviour {
 
 
         // reset player position to middle
-        if(gameObject.transform.position.x < -70 || gameObject.transform.position.x > 70f || gameObject.transform.position.y < -5f)
+        if(gameObject.transform.position.x < -70  || gameObject.transform.position.x > 70f || gameObject.transform.position.y < -5f)
         {
             gameObject.transform.position = spawnPosition;
         }

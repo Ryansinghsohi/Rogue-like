@@ -18,17 +18,20 @@ public class HighscoreManager : MonoBehaviour
         UpdateHighscoreText();
     }
 
+    // add the highscore to leaderboard and update leaderboard
     public void SubmitScore()
     {
         Leaderboards.Myleaderboard.UploadNewEntry(userInput.text, PlayerData.high_score);
         Invoke("UpdateHighscoreText", 0.5f);
     }
 
+    // updare the leaderboard
     void UpdateHighscoreText()
     {
         Leaderboards.Myleaderboard.GetEntries(OnEntriesLoaded);
     }
 
+    // load the leaderboard
     private void OnEntriesLoaded(Entry[] entries)
     {
         string newText = "High level: \n";

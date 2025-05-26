@@ -14,7 +14,7 @@ public class FlyingEyescript : Enemies
         Enemy_damage = 20 + 10 * PlayerData.level;
     }
 
-    // movement funktion
+    // movement override funktion
     public override void Movement()
     {
         // track player

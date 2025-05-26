@@ -44,12 +44,12 @@ public class CoinMovement : MonoBehaviour
         // coin to player path
         if(MoveToPlayer == true) 
         {
-
             Vector3 movement = (Player.transform.position - transform.position).normalized;
             rb.velocity = movement * speed;
         }
     }
 
+    // player collects coin
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player") 
@@ -57,11 +57,5 @@ public class CoinMovement : MonoBehaviour
             PlayerData.Coins += value;
             Destroy(gameObject);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
